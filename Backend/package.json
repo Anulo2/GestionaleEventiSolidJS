@@ -1,0 +1,23 @@
+{
+  "name": "gestionaleeventibackend",
+  "module": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.1",
+    "drizzle-kit": "^0.22.7"
+  },
+  "scripts": {
+    "generate": "bunx --bun drizzle-kit generate ",
+    "push": "bunx --bun drizzle-kit push:pg --config=drizzle.config.js",
+    "studio": "bunx --bun drizzle-kit studio --verbose",
+    "migrate": "bunx --bun drizzle-kit migrate",
+    "lint": "bunx @biomejs/biome lint --write ./ "
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@elysiajs/cors": "^1.0.2",
+    "@elysiajs/swagger": "^1.0.5",
+    "drizzle-orm": "^0.31.2",
+    "elysia": "^1.0.24"
+  }
+}
